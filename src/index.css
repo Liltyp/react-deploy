@@ -1,0 +1,159 @@
+
+/* Font imported from gogle font cpoying the code generated from the family the selected family*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* '*' it is for the entire website it stands for all that is all the attribute to this code will be done all over the website*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+/* creating the css variable that will be used in the root or the App*/
+:root{
+    --color-bg: #1f1f38;
+    --color-ng-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+    --color-bg-variant: rgb(54, 13, 105);
+
+    --transition: all 400ms ease;
+
+    --container-width-lg: 75%;
+    --container-width-md: 75%;
+    --container-width-sm: 90%;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
+
+}
+body{ 
+   /* generated from google font to change to the Font type Poppins*/
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    line-height: 1.7;
+    background-image: url(../src/assets/bg-texture.png);
+
+}
+
+/* General style*/
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+/* the style for all headers that is h1 to h5*/
+
+h1, h2, h3, h4, h5{
+    font-weight: 500;
+}
+
+h1{
+
+    font-size: 2.5rem;
+
+}
+/*Every components must be in the section tag so let define it styles*/
+section{
+    margin-top: 8rem;
+    height: 100vh;
+
+}
+
+/* since every section in the components will have two headers one in h2 and the other in h5 */
+
+section > h2, section > h5{
+    text-align: center; /*align the h2 and h5 to the center */
+    color: var(--color-light);
+}
+
+section > h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.text-light{
+
+    color: var(--color-light);
+
+}
+
+/*style for all the anchors tags*/
+a{
+
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+ /* every anchors must have a hover effect*/
+a:hover{
+    color: var(--color-light);
+}
+
+.btn{
+
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem; /* thew first value is for the top and bottom and the second for left and right*/
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+
+}
+
+.btn:hover{
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+.btn-primary{
+
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Media queries(for medium devices e.g computers)*/
+@media screen and (max-width:1024px){
+    .container{
+        width: var(--container-width-md);
+    }
+
+    section{
+        margin-top: 6rem;
+    }
+    
+}
+
+/*Media queries(for small devices e.g telephone)*/
+@media screen and (max-width:600px){
+    .container{
+        width: var(--container-width-sm);
+    }
+
+    section > h2{
+        margin-bottom: 2rem;
+    }
+    
+}
